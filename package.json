@@ -1,0 +1,11 @@
+{
+  "name": "nlp-project",
+  "scripts": {},
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  }
+}
