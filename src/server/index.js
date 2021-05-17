@@ -1,3 +1,8 @@
+//get api key
+const dotenv = require('dotenv')
+dotenv.config()
+const apiKey = process.env.API_KEY
+
 //load dependencies
 const path = require('path')
 const express = require('express')
