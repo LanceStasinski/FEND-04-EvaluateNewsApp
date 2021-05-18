@@ -14,3 +14,5 @@ const postData = async (url = '', data = {}) =>{
     alert("Cannot post to server");
   }
 }
+
+export { postData }
