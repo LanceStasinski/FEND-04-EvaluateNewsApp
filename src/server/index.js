@@ -42,7 +42,6 @@ function getNLPData (req, res) {
   //set language to auto, response to english, and include detailed response
   formData.append("lang", "auto");
   formData.append("ilang", "en");
-  formData.append("verbose", "y");
 
   //post request that should result in a new object containing the response from
   //meaningcloud.
@@ -70,5 +69,5 @@ const postAPI = async (url = '', data = {}) => {
 app.get('/all', sendData)
 
 function sendData (req, res) {
-  res.send(projectData)
+  res.send(projectData[0])
 }

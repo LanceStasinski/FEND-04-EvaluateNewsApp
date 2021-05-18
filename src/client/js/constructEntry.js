@@ -47,3 +47,5 @@ function constructEntry (data) {
   ironyDiv.innerHTML = `<b>Irony:</b> ${irony}`;
   entry.appendChild(ironyDiv);
 }
+
+export { constructEntry }
