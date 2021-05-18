@@ -1,6 +1,6 @@
 //import js files
-import { getData } from './js/postData'
-
+import { postData } from './js/postData'
+import { getData } from './js/getData'
 
 //import sass files
 
