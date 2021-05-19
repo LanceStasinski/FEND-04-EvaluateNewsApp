@@ -23,5 +23,7 @@ import './styles/results.scss'
 
 //export .js files
 export {
-  post
+  postData,
+  getData,
+  constructEntry
 }
