@@ -2,10 +2,11 @@
 import { postData } from './js/postData'
 import { getData } from './js/getData'
 import { constructEntry } from './js/constructEntry'
+import { analyzeText } from './js/analyzeText'
 
 //generate NLP results when button is clicked
 const button = document.getElementById('submit');
-button.addEventListener('click', Client.analyzeText());
+button.addEventListener('click', analyzeText);
 
 //import sass files
 import './styles/_base.scss'
@@ -19,5 +20,6 @@ import './styles/results.scss'
 export {
   postData,
   getData,
-  constructEntry
+  constructEntry,
+  analyzeText
 }

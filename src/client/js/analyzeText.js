@@ -3,3 +3,5 @@ function analyzeText () {
   Client.postData('/add', input)
   .then(Client.getData('/all'))
 }
+
+export { analyzeText }
