@@ -11,7 +11,7 @@
 
 #submit {
   background-color: base.$primary-color;
-  color: $secondary-color;
+  color: base.$secondary-color;
 
   &:hover{
     cursor: pointer;
