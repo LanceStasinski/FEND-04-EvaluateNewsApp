@@ -1,0 +1,11 @@
+@use 'base';
+
+.main-hero {
+  height: 10vh;
+  font-family: $font-stack;
+  color: $primary-color;
+
+  h1 {
+    font-size: 5em;
+  }
+}
