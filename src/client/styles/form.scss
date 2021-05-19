@@ -1,0 +1,20 @@
+@use 'base';
+
+.form {
+  font-family: $font-stack;
+  color: $primary-color;
+  border-bottom: solid 2px $primary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#submit {
+  background-color: $primary-color;
+  color: $secondary-color;
+
+  &:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
