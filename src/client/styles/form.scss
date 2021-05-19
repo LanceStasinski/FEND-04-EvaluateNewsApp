@@ -1,16 +1,16 @@
 @use 'base';
 
 .form {
-  font-family: $font-stack;
-  color: $primary-color;
-  border-bottom: solid 2px $primary-color;
+  font-family: base.$font-stack;
+  color: base.$primary-color;
+  border-bottom: solid 2px base.$primary-color;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 #submit {
-  background-color: $primary-color;
+  background-color: base.$primary-color;
   color: $secondary-color;
 
   &:hover{

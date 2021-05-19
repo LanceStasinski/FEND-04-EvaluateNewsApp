@@ -2,8 +2,8 @@
 
 .main-hero {
   height: 10vh;
-  font-family: $font-stack;
-  color: $primary-color;
+  font-family: base.$font-stack;
+  color: base.$primary-color;
 
   h1 {
     font-size: 5em;
