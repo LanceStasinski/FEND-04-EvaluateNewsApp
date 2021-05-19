@@ -12,6 +12,16 @@ function analyzeText () {
   postData('/add', input)
   .then(constructEntry(getData('/all')))
 }
-//import sass files
 
-//export {.js files (variable names)}
+//import sass files
+import './styles/_base.scss'
+import './styles/container.scss'
+import './styles/footer.scss'
+import './styles/form.scss'
+import './styles/header.scss'
+import './styles/results.scss'
+
+//export .js files
+export {
+  post
+}
