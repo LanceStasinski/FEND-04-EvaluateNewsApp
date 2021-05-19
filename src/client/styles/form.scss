@@ -4,9 +4,7 @@
   font-family: base.$font-stack;
   color: base.$primary-color;
   border-bottom: solid 2px base.$primary-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  display: block;
 }
 
 #submit {

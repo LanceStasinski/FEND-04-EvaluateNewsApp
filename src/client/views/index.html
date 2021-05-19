@@ -9,12 +9,13 @@
     />
     <base href="/">
 
-    <link rel="stylesheet" href="./styles/_base.css">
-    <link rel="stylesheet" href="./styles/container.css">
-    <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/form.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/results.css">
+    <link href="./styles/_base.css" type="text/css">
+    <link href="./styles/container.css" type="text/css">
+    <link href="./styles/header.css" type="text/css">
+    <link href="./styles/form.css" type="text/css">
+    <link href="./styles/results.css" type="text/css">
+    <link href="./styles/footer.css" type="text/css">
+
   </head>
   <body class="container">
     <header class="main-hero">
@@ -22,19 +23,17 @@
         Text Sentiment Analysis
       </h1>
     </header>
-    <main>
-      <section class="form">
-        <h2>Analyze the text of another website!</h2>
-        <form>
-          <label for="web-url">Enter a website's URL here:</label>
-          <input type="url" id="web-url" placeholder="URL:" autocomplete="on" required/>
-        </form>
-        <button id="submit">Submit</button>
-      </section>
-      <section id="entry">
+    <section class="form">
+      <h2>Analyze the text of another website!</h2>
+      <form>
+        <label for="web-url">Enter a website's URL here:</label>
+        <input type="url" id="web-url" placeholder="URL:" autocomplete="on" required/>
+      </form>
+      <button id="submit">Submit</button>
+    </section>
+    <section id="entry">
 
-      </section>
-    </main>
+    </section>
     <footer>
       Results from <a href="https://learn.meaningcloud.com/developer/sentiment-analysis/2.1/doc">
         Sentiment Analysis API version 2.1 </a>
