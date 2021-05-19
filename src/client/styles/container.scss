@@ -1,0 +1,10 @@
+@use 'base';
+
+.container {
+  width: 95%;
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 15px;
+  background-color: $secondary-color;
+  justify-content: center;
+}
