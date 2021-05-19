@@ -8,8 +8,8 @@ const button = document.getElementById('submit');
 button.addEventListener('click', analyzeText);
 
 function analyzeText () {
-  const entry = document.getElementById('web-url').value;
-  postData('/add', entry)
+  const input = document.getElementById('web-url').value;
+  postData('/add', input)
   .then(constructEntry(getData('/all')))
 }
 //import sass files

@@ -6,8 +6,9 @@ function constructEntry (data) {
   }
 
   const entry = document.getElementById('entry');
+  const fragment = document.createDocumentFragment();
   const header = document.createElement('h2').innerHTML("Sentiment Analysis Results")
-  entry.appendChild(header);
+  fragment.appendChild(header);
 
   const scoreDiv = document.createElement('div');
   const score = data.score_tag;
@@ -18,26 +19,28 @@ function constructEntry (data) {
     : (score == 'N+') ? 'Strongly Negative'
     : 'No Polarity';
   scoreDiv.innerHTML = `<b>Polarity:</b> ${polarity}`;
-  entry.appendChild(scoreDiv);
+  fragment.appendChild(scoreDiv);
 
   const agreeDiv = document.createElement('div');
   const agreement = capitalFirstLetter(data.agreement);
   agreeDiv.innerHTML = `<b>Agreement:</b> ${agreement}`;
-  entry.appendChild(agreeDiv);
+  fragment.appendChild(agreeDiv);
 
   const subjectDiv = document.createElement('div');
   const subjectivity = capitalFirstLetter(data.subjectivity);
   subjectDiv.innerHTML = `<b>Subjectivity:</b> ${subjectivity}`;
-  entry.appendChild(subjectDiv);
+  fragment.appendChild(subjectDiv);
 
   const confDiv = document.createElement('div');
   confDiv.innerHTML = `<b>Confidence:</b> ${data.confidence}%`;
-  entry.appendChild(confDiv);
+  fragment.appendChild(confDiv);
 
   const ironyDiv = document.createElement('div');
   const irony = capitalFirstLetter(data.irony);
   ironyDiv.innerHTML = `<b>Irony:</b> ${irony}`;
-  entry.appendChild(ironyDiv);
+  fragment.appendChild(ironyDiv);
+
+  entry.appendChild(fragment);
 }
 
 export { constructEntry }
