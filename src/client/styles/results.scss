@@ -1,0 +1,10 @@
+@use 'base';
+
+#entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: solid 2px $primary-color;
+  border-radius: 5%;
+  font-family: $font-stack;
+}
