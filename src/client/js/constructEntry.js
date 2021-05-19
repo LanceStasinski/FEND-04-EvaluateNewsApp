@@ -10,21 +10,13 @@ function constructEntry (data) {
   entry.appendChild(header);
 
   const scoreDiv = document.createElement('div');
-  let polarity = "";
   const score = data.score_tag;
-  if (score == 'P+') {
-    polarity = 'Strongly Positive';
-  } else if (score == 'P') {
-    polarity = 'Positive';
-  } else if (score == 'NEU') {
-    polarity = 'Neutral';
-  } else if (score == 'N') {
-    polarity = 'Negative';
-  } else if (score == 'N+') {
-    polarity = 'Strongly Negative';
-  } else if (score == 'NONE') {
-    polarity = 'No polarity';
-  }
+  let polarity = (score == 'P+') ? 'Strongly Positive'
+    : (score == 'P') ? 'Positive'
+    : (score == 'NEU') ? 'Neutral'
+    : (score == 'N') ? 'Negative'
+    : (score == 'N+') ? 'Strongly Negative'
+    : 'No Polarity';
   scoreDiv.innerHTML = `<b>Polarity:</b> ${polarity}`;
   entry.appendChild(scoreDiv);
 
