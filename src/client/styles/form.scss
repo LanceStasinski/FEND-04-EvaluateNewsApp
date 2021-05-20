@@ -5,11 +5,16 @@
   color: base.$primary-color;
   border-bottom: solid 2px base.$primary-color;
   display: block;
+
+  input {
+    width: 60%;
+  }
 }
 
 #submit {
   background-color: base.$primary-color;
   color: base.$secondary-color;
+  margin: 1em 0em 1em 0em;
 
   &:hover{
     cursor: pointer;

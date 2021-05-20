@@ -6,6 +6,7 @@ function constructEntry (data) {
   }
 
   const entry = document.getElementById('entry');
+  entry.style.display = "flex";
   const fragment = document.createDocumentFragment();
   const header = document.createElement('h2').innerHTML("Sentiment Analysis Results")
   fragment.appendChild(header);

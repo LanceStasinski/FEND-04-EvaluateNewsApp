@@ -5,7 +5,7 @@
   font-family: base.$font-stack;
   color: base.$primary-color;
   display: block;
-  margin: 1em;
+  //margin: 1em 0em 0em 0em;
 
   h1 {
     font-size: 2em;
@@ -15,10 +15,6 @@
 @media only screen and (min-width: 900px) {
   .main-hero {
     min-height: 10vh;
-    font-family: base.$font-stack;
-    color: base.$primary-color;
-    display: block;
-    margin: 1em;
 
     h1 {
       font-size: 5em;
