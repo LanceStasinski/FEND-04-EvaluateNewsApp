@@ -8,7 +8,7 @@ const postData = async (url = '', data = "") =>{
   });
   try {
     const newData = await response.json();
-    return newData;
+    myLibrary.constructEntry(newData);
   } catch(error) {
     console.log('error', error);
     alert("Cannot post to server");
