@@ -3,14 +3,22 @@ const webpack = require('webpack')
 const HtmlWebPackPlugin  = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './src/client/index.js',
+  entry: path.resolve(__dirname, './src/client/index.js'),
   output: {
-    libraryTarget: 'var',
-    library: 'Client',
-    clean: true,
+   path: path.resolve(__dirname, 'dist'),
+   filename: 'index.js',
+   library: 'myLibrary',
+   libraryTarget: 'umd',
+  },
+  resolve: {
+    extensions: ['.js'],
+    modules: [path.resolve(__dirname, 'src')]
   },
   mode: 'development',
   devtool: 'source-map',
+  devServer: {
+    injectClient: false
+  },
   module: {
     rules: [
       {

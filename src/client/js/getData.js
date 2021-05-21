@@ -3,7 +3,7 @@ const getData = async (url= '') => {
 
   try{
     const newEntry = await request.json();
-    Client.constructEntry(newEntry);
+    myLibrary.constructEntry(newEntry);
   } catch(error) {
     console.log("error", error);
     alert("Could not get data from server")
