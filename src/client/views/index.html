@@ -21,7 +21,7 @@
         <label for="web-url">Enter a website's URL here:</label>
         <input type="url" id="web-url" placeholder="URL:" autocomplete="on" required/>
       </form>
-      <button id="submit">Submit</button>
+      <button id="submit" type="submit">Submit</button>
     </section>
     <section id="entry">
 
@@ -32,7 +32,7 @@
     </footer>
     <script src="index.js"></script>
     <script type="text/javascript">
-      document.getElementById('submit').addEventListener('click', myLibrary.analyzeText())
+      document.getElementById('submit').addEventListener('click', myLibrary.analyzeText(event))
     </script>
   </body>
 </html>

@@ -4,7 +4,7 @@ projectData = [];
 //get api key
 const dotenv = require('dotenv')
 dotenv.config()
-const apiKey = process.env.API_KEY
+const apiKey = process.env.API_KEY;
 
 //load dependencies
 const path = require('path')
@@ -32,6 +32,14 @@ app.post('/add', getNLPData);
 
 //POST request to meaningcloud.com
 function getNLPData (req, res) {
+  const newsURL = req.body.url;
+  const results = await fetch(`https://api.meaningcloud.com/sentiment-2.1=${apiKey}&url=${newsURL}`,
+  { method: 'POST'});
+
+
+
+
+
   console.log(req.body);
   //create new data object that will be sent to meaningcloud
   const formData = new FormData();

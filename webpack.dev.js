@@ -14,6 +14,7 @@ module.exports = {
     extensions: ['.js'],
     modules: [path.resolve(__dirname, 'src')]
   },
+  stats: 'verbose',
   mode: 'development',
   devtool: 'source-map',
   devServer: {
