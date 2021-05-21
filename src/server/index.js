@@ -23,11 +23,8 @@ app.listen(3030, function () {
   console.log(`running on localhost: 3030`)
 })
 
-//POST route where the callback function sends a post request to external api
-app.post('/add', getNLPData);
-
 //POST request to meaningcloud.com
-function getNLPData (req, res) {
+const getNLPData = async (req, res) => {
   const newsURL = req.body.data;
   const results = await fetch(`https://api.meaningcloud.com/sentiment-2.1=${apiKey}&url=${newsURL}`,
   { method: 'POST'});
@@ -39,4 +36,9 @@ function getNLPData (req, res) {
     console.log("error", error)
   }
 }
+
+//POST route where the callback function sends a post request to external api
+app.post('/add', getNLPData);
+
+
 
