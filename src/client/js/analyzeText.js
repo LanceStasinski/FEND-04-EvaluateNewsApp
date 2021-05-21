@@ -7,6 +7,4 @@ function analyzeText (event) {
 
 document.getElementById('submit').addEventListener('click', analyzeText)
 
-
-
 export { analyzeText }
