@@ -1,18 +1,16 @@
 //post user-entered data to server
-const postData = async (url = '', data = "") =>{
-  const response = await fetch(url, {
+function postData(data) {
+  fetch('http://localhost:3030/add', {
     method: 'POST',
     credentials: 'same-origin',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify({url: data})
-  });
-  try {
-    const newData = await response.json();
-    myLibrary.constructEntry(newData);
-  } catch(error) {
-    console.log('error', error);
-    alert("Cannot post to server");
-  }
+  })
+  .then((response) => response.json())
+  .then((response) => {
+    console.log(response)
+    myLibrary.constructEntry(response)
+  })
 }
 
 export { postData }

@@ -8,6 +8,7 @@ const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const fetch = require('node-fetch')
 
 //start instance and initialize depenedencies
 const app = express()
@@ -25,9 +26,10 @@ app.listen(3030, function () {
 
 //POST request to meaningcloud.com
 const getNLPData = async (req, res) => {
-  const newsURL = req.body.data;
-  const results = await fetch(`https://api.meaningcloud.com/sentiment-2.1=${apiKey}&url=${newsURL}`,
-  { method: 'POST'});
+  const newsURL = req.body.url;
+  console.log(newsURL);
+  const results = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&url=${newsURL}&lang=en`,
+  { method: 'POST' });
 
   try {
     const apiData = await results.json();

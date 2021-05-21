@@ -1,8 +1,8 @@
 //import js files
 import { postData } from './js/postData'
-import { getData } from './js/getData'
 import { constructEntry } from './js/constructEntry'
 import { analyzeText } from './js/analyzeText'
+import { capitalFirstLetter } from './js/capitalFirstLetter'
 
 //import sass files
 import './styles/_base.scss'
@@ -15,8 +15,8 @@ import './styles/results.scss'
 //export .js files
 export {
   postData,
-  getData,
   constructEntry,
-  analyzeText
+  analyzeText,
+  capitalFirstLetter
 }
 
