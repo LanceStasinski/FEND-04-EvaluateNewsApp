@@ -21,3 +21,17 @@
     transform: scale(1.05);
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .form {
+    font-size: 1.5em;
+
+    input {
+      font-size: 1em;
+    }
+  }
+
+  #submit {
+    font-size: 1em;
+  }
+}

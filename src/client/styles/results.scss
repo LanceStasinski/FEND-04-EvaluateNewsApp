@@ -17,3 +17,11 @@
     text-decoration: underline;
   }
 }
+
+@media only screen and (min-width: 900px) {
+  #entry {
+    div {
+      font-size: 1.25em;
+    }
+  }
+}
