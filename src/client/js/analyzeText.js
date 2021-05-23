@@ -5,6 +5,9 @@ function analyzeText (event) {
   myLibrary.postData(input)
 }
 
-document.getElementById('submit').addEventListener('click', analyzeText)
+const submit = document.getElementById('submit')
+if (submit) {
+  submit.addEventListener('click', analyzeText)
+}
 
 export { analyzeText }

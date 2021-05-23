@@ -1,6 +1,4 @@
 function constructEntry (data) {
-  //capitalize first letter and lowercase the rest function found posted by
-  //gurvinder372 at https://stackoverflow.com/questions/36996698/how-do-i-lowercase-any-string-then-capitalize-only-the-first-letter-of-the-word
   if (data.status.msg == "OK") {
     const entry = document.getElementById('entry');
     entry.style.display = "flex";
