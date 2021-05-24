@@ -1,4 +1,10 @@
+//Update the UI with the results from the meaningcloud API. The results are
+//modified to increase readability by the user. For example, abbreviations for
+//the polarity of an article are expanded into full words, and uppercase results
+//are lower-cased (SUBJECTIVE -> Subjective).
+
 function constructEntry (data) {
+  //if meaningcloud responds with a status of "OK", then update the UI
   if (data.status.msg == "OK") {
     const entry = document.getElementById('entry');
     entry.style.display = "flex";
@@ -39,6 +45,8 @@ function constructEntry (data) {
 
     entry.appendChild(fragment);
   } else {
+    // if meaningcloud does not respond with a status message of "OK", alert the
+    //user to change the URL.
     alert(`${data.status.msg}. Please check the URL or enter a new one.`)
   }
 }
