@@ -1,4 +1,4 @@
-//post user-entered data to server
+//post user-entered data to server than pass the results to constructEntry()
 async function postData(data) {
   try{
     await fetch('http://localhost:3030/add', {
