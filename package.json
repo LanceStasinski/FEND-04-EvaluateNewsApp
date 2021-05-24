@@ -4,6 +4,7 @@
     "test": "jest",
     "start": "node src/server/index.js",
     "build-prod": "webpack --config webpack.prod.js",
+    "view": "google-chrome http://localhost:3030",
     "build-dev": "webpack serve  --config webpack.dev.js --open"
   },
   "keywords": [],
