@@ -1,5 +1,6 @@
 const fetch = require("node-fetch");
-//test if error is returned if the fetch request cannot reach the local server
+//test if post request is sent to server. Error should be undefined if request
+//goes through
 async function postData(data) {
   try{
     await fetch('http://localhost:3030/add', {
@@ -17,8 +18,8 @@ async function postData(data) {
 }
 
 describe('Post request to server', () => {
-  test('Error should be defined when server is not running', async () => {
+  test('Error should be undefined when server is running', async () => {
     const err = await postData("string");
-    expect(err).toBeDefined();
+    expect(err).toBeUndefined();
   })
 })
