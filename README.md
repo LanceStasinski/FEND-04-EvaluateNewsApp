@@ -5,7 +5,6 @@
 * [Description](#Description)
 * [Instructions](#Instructions)
 * [Resources](#Resources)
-* [License](#License)
 
 ## Description
 
@@ -24,7 +23,7 @@ Specifically, this app makes a post request containing a URL input by the user t
 
 ### Challenges
 
-I found it challenging to correctly impliment a custom library and then test functions that rely on other functions in the library. I overcame this by stripping functions to their basic requirments for the test scripts. I also found some webpack configurations suggested for the project to be outdated, so I relied on documentation to bring those configurations up to today's standards. For instance, the optimize-css-assets-webpack-plugin is now deprecated and the css-minimizer-webpack-plugin should now be used instead.
+I found it challenging to correctly impliment a custom library and then test functions that rely on other functions in the library. I overcame this by decreasing the complexity of the functions to ensure that the basic utilities were working. For example, I reduced the complexity of the constructEntry function to test that that it updated the UI given some information. I also found some webpack configurations suggested for the project to be outdated, so I relied on documentation to bring those configurations up to today's standards. For instance, the optimize-css-assets-webpack-plugin is now deprecated and the css-minimizer-webpack-plugin should be used instead.
 
 ## Instructions
 
@@ -51,6 +50,8 @@ API_KEY = <your key here>
 
 ### Start the app
 
+#### Start the server
+
 Use `npm run start` to start the Express server.
 
 #### Production Mode
@@ -59,7 +60,7 @@ Use these commands if you want to view the project in production mode (recommend
 
 ```bash
 
-npm run build-dev
+npm run build-prod
 
 ```
 
@@ -84,3 +85,4 @@ npm run build-dev
 * [css-minimizer-webpack-plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin)
 * [Stackoverflow-gurvinder372](https://stackoverflow.com/questions/36996698/how-do-i-lowercase-any-string-then-capitalize-only-the-first-letter-of-the-word)
 * [Meangingcloud](https://learn.meaningcloud.com/developer/sentiment-analysis/2.1/doc/what-is-sentiment-analysis)
+* [jsdom](https://github.com/jsdom/jsdom)

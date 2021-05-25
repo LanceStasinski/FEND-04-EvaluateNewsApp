@@ -17,6 +17,7 @@ async function postData(data) {
   }
 }
 
+//NOTE: this test will only pass if the server is running
 describe('Post request to server', () => {
   test('Error should be undefined when server is running', async () => {
     const err = await postData("string");
