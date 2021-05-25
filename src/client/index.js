@@ -6,7 +6,7 @@ import { capitalFirstLetter } from './js/capitalFirstLetter'
 
 //import sass files
 import './styles/_base.scss'
-import './styles/container.scss'
+import './styles/main.scss'
 import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
