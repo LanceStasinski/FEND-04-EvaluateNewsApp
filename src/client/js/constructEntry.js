@@ -44,6 +44,10 @@ function constructEntry (data) {
     fragment.append(ironyDiv);
 
     entry.appendChild(fragment);
+  } else if (data.status.msg == 'Operation denied') {
+    // if meaningcloud does not responds with 'Operation denied' tell the user
+    //they need an api key
+    alert(`${data.status.msg}. API Key not accepted.`)
   } else {
     // if meaningcloud does not respond with a status message of "OK", alert the
     //user to change the URL.
