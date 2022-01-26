@@ -1,4 +1,4 @@
-@use 'base';
+@use "base";
 
 .container {
   width: 95%;
@@ -6,5 +6,11 @@
   grid-template-rows: repeat(4, auto);
   gap: 15px;
   background-color: base.$secondary-color;
+  justify-content: center;
+  animation: addColor 2s forwards e;
+}
+
+#website-link {
+  display: flex;
   justify-content: center;
 }

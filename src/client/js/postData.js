@@ -14,7 +14,7 @@ async function postData(data) {
     })
   } catch (error) {
     console.log("error", error);
-    alert("Local server is not running.")
+    alert("Oops, something went wrong.")
   }
 }
 

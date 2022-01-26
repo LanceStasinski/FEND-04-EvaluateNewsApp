@@ -11,10 +11,12 @@
   }
 }
 
-#submit {
+.button {
   background-color: base.$primary-color;
   color: base.$secondary-color;
   margin: 1em 0em 1em 0em;
+  font-family: base.$font-stack;
+  padding: 4px;
 
   &:hover{
     cursor: pointer;
@@ -31,7 +33,7 @@
     }
   }
 
-  #submit {
+  .button {
     font-size: 1em;
   }
 }
