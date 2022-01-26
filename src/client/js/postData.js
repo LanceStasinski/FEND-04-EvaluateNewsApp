@@ -1,7 +1,9 @@
 //post user-entered data to server then pass the results to constructEntry()
+
+const REST_API = process.env.REST_API;
 async function postData(data) {
   try {
-    await fetch("http://localhost:3030/add", {
+    await fetch(`${REST_API}/add`, {
       method: "POST",
       credentials: "same-origin",
       headers: { "Content-Type": "application/json" },
@@ -9,7 +11,6 @@ async function postData(data) {
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         myLibrary.constructEntry(response);
       });
   } catch (error) {

@@ -1,45 +1,46 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  entry: './src/client/index.js',
+  entry: "./src/client/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
-    library: 'myLibrary',
-    libraryTarget: 'umd',
-   },
-  mode: 'production',
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.js",
+    library: "myLibrary",
+    libraryTarget: "umd",
+  },
+  mode: "production",
   module: {
     rules: [
       {
-        test: '/\.js$/',
+        test: "/.js$/",
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: "babel-loader",
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-      }
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
     ],
   },
   optimization: {
-    minimizer: [
-      new CssMinimizerPlugin({}),
-      new TerserPlugin({})
-    ],
+    minimizer: [new CssMinimizerPlugin({}), new TerserPlugin({})],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/client/views/index.html',
-      filename: './index.html'
+      template: "./src/client/views/index.html",
+      filename: "./index.html",
     }),
     new WorkboxPlugin.GenerateSW(),
-    new MiniCssExtractPlugin({filename: '[name].css'})
-  ]
-}
+    new MiniCssExtractPlugin({ filename: "[name].css" }),
+    new Dotenv({
+      path: "./.env.production",
+    }),
+  ],
+};

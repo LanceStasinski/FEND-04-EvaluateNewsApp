@@ -27,7 +27,6 @@ app.listen(3030, function () {
 //POST request to meaningcloud.com
 const getNLPData = async (req, res) => {
   const newsURL = req.body.url;
-  console.log(newsURL);
   const results = await fetch(
     `https://api.meaningcloud.com/sentiment-2.1?key=${apiKey}&url=${newsURL}&lang=en`,
     { method: "POST" }
