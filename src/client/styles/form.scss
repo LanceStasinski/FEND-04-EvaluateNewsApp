@@ -1,4 +1,4 @@
-@use 'base';
+@use "base";
 
 .form {
   font-family: base.$font-stack;
@@ -18,7 +18,7 @@
   font-family: base.$font-stack;
   padding: 4px;
 
-  &:hover{
+  &:hover {
     cursor: pointer;
     transform: scale(1.05);
   }

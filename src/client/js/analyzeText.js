@@ -4,14 +4,13 @@
 //then sent back to the client and the UI is updated with results of the NLP
 //analysis.
 
-function analyzeText () {
-  let input = document.getElementById('web-url').value;
+function analyzeText() {
+  let input = document.getElementById("web-url").value;
   console.log(input);
-  myLibrary.postData(input)
+  myLibrary.postData(input);
 }
 
 //add event listener to submit button
-document.getElementById('submit').addEventListener('click', analyzeText)
+document.getElementById("submit").addEventListener("click", analyzeText);
 
-
-export { analyzeText }
+export { analyzeText };

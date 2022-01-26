@@ -53,7 +53,7 @@ function constructEntry(data) {
     subjectDiv.innerHTML = `<b>Subjectivity:</b> ${subjectivity}`;
     fragment.append(subjectDiv);
 
-    const confDiv = document.createElement("div");
+    const confDiv = Fdocument.createElement("div");
     confDiv.innerHTML = `<b>Confidence:</b> ${data.confidence}%`;
     fragment.append(confDiv);
 
