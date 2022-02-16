@@ -5,8 +5,14 @@
 
 function constructEntry(data) {
   //if meaningcloud responds with a status of "OK", then update the UI
+
   if (data.status.msg == "OK") {
     const entry = document.getElementById("entry");
+    if (entry.firstChild) {
+      while (entry.firstChild) {
+        entry.removeChild(entry.firstChild);
+      }
+    }
     entry.style.display = "flex";
     const fragment = document.createDocumentFragment();
     const header = document.createElement("h2");

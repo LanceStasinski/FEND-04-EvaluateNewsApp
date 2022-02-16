@@ -1,45 +1,50 @@
-const path = require('path')
-const webpack = require('webpack')
-const HtmlWebPackPlugin  = require('html-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin');
-
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/client/index.js'),
+  entry: path.resolve(__dirname, "./src/client/index.js"),
   output: {
-   path: path.resolve(__dirname, 'dist'),
-   filename: 'index.js',
-   library: 'myLibrary',
-   libraryTarget: 'umd',
+    path: path.resolve(__dirname, "dist"),
+    filename: "index.js",
+    library: "myLibrary",
+    libraryTarget: "umd",
   },
   resolve: {
-    extensions: ['.js'],
-    modules: [path.resolve(__dirname, 'src')]
+    extensions: [".js"],
+    modules: [path.resolve(__dirname, "src")],
   },
-  stats: 'verbose',
-  mode: 'development',
-  devtool: 'source-map',
+  stats: "verbose",
+  mode: "development",
+  devtool: "source-map",
   devServer: {
-    injectClient: false
+    injectClient: false,
   },
   module: {
     rules: [
       {
-        test: '/\.js$/',
+        test: "/.js$/",
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: "babel-loader",
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      }
-    ]
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/client/views/index.html',
-      filename: './index.html'
+      template: "./src/client/views/index.html",
+      filename: "./index.html",
     }),
+    new Dotenv({
+      path: "./.env.development",
+    }),
+    new FaviconsWebpackPlugin("./src/logo.png"),
     // new WorkboxPlugin.GenerateSW()
-  ]
-}
+  ],
+};

@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/index.js",
@@ -39,6 +40,7 @@ module.exports = {
     }),
     new WorkboxPlugin.GenerateSW(),
     new MiniCssExtractPlugin({ filename: "[name].css" }),
+    new FaviconsWebpackPlugin("./src/logo.png"),
     new Dotenv({
       path: "./.env.production",
     }),
